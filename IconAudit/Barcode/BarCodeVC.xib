@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarCodeVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-LZ-AUn">
+                    <rect key="frame" x="34" y="10" width="532" height="580"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="580" id="H2t-XV-Ygj"/>
+                        <constraint firstAttribute="width" constant="532" id="hnW-yN-tIU"/>
+                    </constraints>
+                    <state key="normal" image="barcode.png"/>
+                    <connections>
+                        <action selector="clickonCode:" destination="-1" eventType="touchUpInside" id="Mve-ry-Etf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ccf-LZ-AUn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="T3N-c9-8J6"/>
+                <constraint firstAttribute="bottom" secondItem="ccf-LZ-AUn" secondAttribute="bottom" constant="10" id="cjG-Mj-PmR"/>
+                <constraint firstItem="ccf-LZ-AUn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="fbC-er-dDj"/>
+                <constraint firstAttribute="trailing" secondItem="ccf-LZ-AUn" secondAttribute="trailing" constant="34" id="gt4-aq-Yd6"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="barcode.png" width="397" height="369"/>
+    </resources>
+</document>

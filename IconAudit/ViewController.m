@@ -10,18 +10,72 @@
 
 @interface ViewController ()
 
+
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+
+}
+
+- (IBAction)clickonGo:(id)sender
+{
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"audit"])
+    {
+        //AuditVC * audio = [segue destinationViewController];
+    }
+
+}
+
+#pragma mark -
+#pragma mark UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    if (textField == _txt_ID)
+    {
+        [_txt_password becomeFirstResponder];
+    }
+    else if(textField == _txt_password)
+    {
+        [self.view endEditing:YES];
+    }
+    return YES;
 }
 
 @end
