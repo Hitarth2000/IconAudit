@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AddCell">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxq-k8-kWh">
+                        <rect key="frame" x="51" y="11" width="607" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKV-hv-Ayv">
+                        <rect key="frame" x="666" y="9" width="36" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="Sf4-UG-GbU"/>
+                        </constraints>
+                        <state key="normal" image="iconVideo.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZf-pZ-XUc">
+                        <rect key="frame" x="712" y="8" width="36" height="25"/>
+                        <state key="normal" image="iconCamera.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TKV-hv-Ayv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3O2-fw-vW1"/>
+                    <constraint firstItem="PZf-pZ-XUc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="72I-Qu-pqP"/>
+                    <constraint firstItem="TKV-hv-Ayv" firstAttribute="leading" secondItem="Zxq-k8-kWh" secondAttribute="trailing" constant="8" id="ETe-dr-ZPX"/>
+                    <constraint firstItem="PZf-pZ-XUc" firstAttribute="leading" secondItem="TKV-hv-Ayv" secondAttribute="trailing" constant="10" id="Gau-bq-tHe"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="PZf-pZ-XUc" secondAttribute="bottom" constant="2" id="NZ9-ex-GQU"/>
+                    <constraint firstItem="TKV-hv-Ayv" firstAttribute="centerY" secondItem="Zxq-k8-kWh" secondAttribute="centerY" id="UZg-nQ-Wqb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PZf-pZ-XUc" secondAttribute="trailing" constant="12" id="crp-jV-Pma"/>
+                    <constraint firstItem="PZf-pZ-XUc" firstAttribute="leading" secondItem="TKV-hv-Ayv" secondAttribute="trailing" constant="10" id="dgb-nO-asi"/>
+                    <constraint firstAttribute="trailing" secondItem="TKV-hv-Ayv" secondAttribute="trailing" constant="66" id="jEW-QA-xZJ"/>
+                    <constraint firstAttribute="centerY" secondItem="PZf-pZ-XUc" secondAttribute="centerY" id="mMU-GZ-fco"/>
+                    <constraint firstItem="PZf-pZ-XUc" firstAttribute="leading" secondItem="TKV-hv-Ayv" secondAttribute="trailing" constant="10" id="nVC-sk-AQm"/>
+                    <constraint firstItem="Zxq-k8-kWh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="ztI-SV-Mzn"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="ETe-dr-ZPX"/>
+                        <exclude reference="jEW-QA-xZJ"/>
+                        <exclude reference="72I-Qu-pqP"/>
+                        <exclude reference="Gau-bq-tHe"/>
+                        <exclude reference="NZ9-ex-GQU"/>
+                        <exclude reference="dgb-nO-asi"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnPhoto" destination="PZf-pZ-XUc" id="ynN-2y-DOq"/>
+                <outlet property="btnVideo" destination="TKV-hv-Ayv" id="hUQ-O5-KuO"/>
+                <outlet property="lbl" destination="Zxq-k8-kWh" id="imU-av-ZK5"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconCamera.png" width="31" height="29"/>
+        <image name="iconVideo.png" width="36" height="25"/>
+    </resources>
+</document>

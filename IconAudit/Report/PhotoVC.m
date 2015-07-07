@@ -1,18 +1,18 @@
 //
-//  GuideVC.m
+//  PhotoVC.m
 //  IconAudit
 //
-//  Created by AMS on 06/07/15.
+//  Created by AMS on 07/07/15.
 //  Copyright (c) 2015 Hitarth. All rights reserved.
 //
 
-#import "GuideVC.h"
+#import "PhotoVC.h"
 
-@interface GuideVC ()
+@interface PhotoVC ()
 
 @end
 
-@implementation GuideVC
+@implementation PhotoVC
 
 - (void)viewDidLoad
 {
@@ -21,12 +21,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [self viewWillAppear:animated];
+    self.title = @"Photo";
 }
-
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
@@ -38,6 +38,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 
 @end
