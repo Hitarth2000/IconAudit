@@ -119,8 +119,23 @@
 }
 - (IBAction)clickonVideo:(id)sender
 {
-    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
+    //[[UIBarButtonItem appearance] setTintColor:COLOR_INK_BLUE];
+    NSString * model = [UIDevice currentDevice].model;
+    if ([model rangeOfString:@"Simulator"].location != NSNotFound)
+    {
+        //[SharedFunction showAlertWithTitle:@"Info" andMsg:@"Camera not supported in this device."];
+        
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Info"
+                                                         message:@"Camera not supported in this device."
+                                                        delegate:self
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        
+        [alert show];
+        return;
+    }
     
+    UIImagePickerController * imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     imagePicker.allowsEditing = YES;
     //imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
@@ -167,7 +182,13 @@
             NSString * model = [UIDevice currentDevice].model;
             if ([model rangeOfString:@"Simulator"].location != NSNotFound)
             {
-                //[SharedFunction showAlertWithTitle:@"Info" andMsg:@"Camera not supported in this device."];
+                
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Info"
+                                                                 message:@"Camera not supported in this device."
+                                                                delegate:self
+                                                       cancelButtonTitle:@"OK"
+                                                       otherButtonTitles: nil];
+                [alert show];
                 return;
             }
             
@@ -188,27 +209,28 @@
     imgView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     
-        if ([picStatus isEqualToString:GALLERY])
-        {
-            //[popOver dismissPopoverAnimated:YES];
-             [self dismissViewControllerAnimated:YES completion:nil];
-        }
-        else
-        {
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
+    if ([picStatus isEqualToString:GALLERY])
+    {
+        //[popOver dismissPopoverAnimated:YES];
+         [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
     
-    [self performSegueWithIdentifier:@"photo" sender:self];
+    [self performSegueWithIdentifier:@"photo" sender:imgView];
     
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    if ([segue.identifier isEqualToString:@"photo"])
-//    {
-//        AddAudit * audio = [segue destinationViewController];
-//        audio.strTitle = self.strTitle;
-//    }
+    if ([segue.identifier isEqualToString:@"photo"])
+    {
+        UIImageView * imgv = (UIImageView*) sender;
+        PhotoVC * photo = [segue destinationViewController];
+        photo.img = imgv;
+    }
     
 }
 @end

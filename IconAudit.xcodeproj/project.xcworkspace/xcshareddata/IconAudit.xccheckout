@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>50B5CE06-6A33-40B6-A468-601963915BD2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>IconAudit</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>82C2F8AA39A13C4CDB53267A0B1D781A963A2BE6</key>
 		<string>https://github.com/Hitarth2000/IconAudit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IconAudit.xcodeproj</string>
+	<string>IconAudit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>82C2F8AA39A13C4CDB53267A0B1D781A963A2BE6</key>

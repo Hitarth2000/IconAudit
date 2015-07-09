@@ -9,7 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "SuperCommonVC.h"
 
-@interface PhotoVC : SuperCommonVC
+@interface PhotoVC : SuperCommonVC <UITextViewDelegate,UIAlertViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIScrollView   * scroll;
+
+@property (weak, nonatomic) IBOutlet UIView  *  viewContent;
+
+@property (nonatomic, retain) UIImageView * img;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+
+@property (weak, nonatomic) IBOutlet UITextView *txtView;
+- (IBAction)clickonGo:(id)sender;
 
 @end

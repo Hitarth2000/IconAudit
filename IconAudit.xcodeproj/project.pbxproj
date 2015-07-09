@@ -37,6 +37,7 @@
 		C9E61D9B1B47F45A007EE822 /* SuperCommonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E61D9A1B47F45A007EE822 /* SuperCommonVC.m */; };
 		C9E61D9E1B47F712007EE822 /* AuditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E61D9D1B47F712007EE822 /* AuditVC.m */; };
 		C9E61DA21B4817F1007EE822 /* AuditListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E61DA11B4817F1007EE822 /* AuditListVC.m */; };
+		C9E6D02B1B4EA58A00EC34CF /* SharedFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E6D02A1B4EA58A00EC34CF /* SharedFunction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		C9E61D9D1B47F712007EE822 /* AuditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuditVC.m; sourceTree = "<group>"; };
 		C9E61DA01B4817F1007EE822 /* AuditListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuditListVC.h; sourceTree = "<group>"; };
 		C9E61DA11B4817F1007EE822 /* AuditListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuditListVC.m; sourceTree = "<group>"; };
+		C9E6D0291B4EA58A00EC34CF /* SharedFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedFunction.h; sourceTree = "<group>"; };
+		C9E6D02A1B4EA58A00EC34CF /* SharedFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedFunction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +257,8 @@
 			children = (
 				C9E61D991B47F45A007EE822 /* SuperCommonVC.h */,
 				C9E61D9A1B47F45A007EE822 /* SuperCommonVC.m */,
+				C9E6D0291B4EA58A00EC34CF /* SharedFunction.h */,
+				C9E6D02A1B4EA58A00EC34CF /* SharedFunction.m */,
 			);
 			path = CommonFiles;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			files = (
 				C9E61DA21B4817F1007EE822 /* AuditListVC.m in Sources */,
 				C95D849B1B4AA1A70006F1A3 /* GuideVC.m in Sources */,
+				C9E6D02B1B4EA58A00EC34CF /* SharedFunction.m in Sources */,
 				C9E61D9E1B47F712007EE822 /* AuditVC.m in Sources */,
 				C9E61D631B47E9EC007EE822 /* ViewController.m in Sources */,
 				C95D84AA1B4B05BD0006F1A3 /* ReportVC.m in Sources */,
